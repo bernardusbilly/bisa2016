@@ -7,22 +7,25 @@ body {
 	background-color: #111111;
 }
 #about {
-	background-color: #222222;
+	background: url(../img/sather-tower.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 #works {
-	background-color: #333333;
+	background-color: #222222;
 }
 #other {
-	background-color: #444444;
+	background-color: #333333;
 }
 #contact {
-	background-color: #555555;
+	background-color: #444444;
 }
 #clients {
-	background-color: #666666;
+	background-color: #555555;
 }
 #bio {
-	background-color: #777777;
+	background-color: #666666;
 }
 
 .title,
@@ -32,7 +35,11 @@ body {
 	top: 50%;
 	left: 50%;
 	width: 200px;
-	margin:-50px 0 0 -100px;
+	margin:-60px 0 0 -100px;
+}
+
+.about-text {
+	padding-top: 45%;
 }
 
 .hidden-title {
@@ -40,4 +47,13 @@ body {
 	width: 500px;
 	margin-top: 30px;
 	margin-left: -250px;
+}
+
+.info-section {
+	font-size: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	margin:-80px 0 0 -400px;
 }
