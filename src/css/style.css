@@ -1,0 +1,43 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #EEE;
+}
+
+#home {
+	background-color: #111111;
+}
+#about {
+	background-color: #222222;
+}
+#works {
+	background-color: #333333;
+}
+#other {
+	background-color: #444444;
+}
+#contact {
+	background-color: #555555;
+}
+#clients {
+	background-color: #666666;
+}
+#bio {
+	background-color: #777777;
+}
+
+.title,
+.hidden-title {
+	font-size: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	margin:-50px 0 0 -100px;
+}
+
+.hidden-title {
+	font-size: 20px;
+	width: 500px;
+	margin-top: 30px;
+	margin-left: -250px;
+}

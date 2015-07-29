@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#"
+      lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="BISA Webpage: The Berkeley Indonesian Student Association (BISA) was established in 1991. Over the past two decades, it has gone through a series of changes with the purpose of creating stronger friendships between Indonesian students in the UC Berkeley campus.">
+    <meta name="author" content="Billy Tjiptoning">
+    <meta property="og:image" content="./src/img/preview.png" />
+    <link rel="icon" type="image/png" href="./src/img/favicon.png">
+
+    <title>BISA Webpage</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="src/css/jquery.scrollSections-0.4.3.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href="src/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<section id="home" class="scrollsections">
+	<div class="title"><img src="src/img/bisa-logo-white.png" style="width: 200px"/></div>
+	<div class="hidden-title text-center">Berkeley Indonesian Student Association</div>
+</section>
+
+<section id="about" class="scrollsections">
+	<div class="title">ABOUT</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="text-center">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="works" class="scrollsections">
+	<div class="title">WORK</div>
+</section>
+
+<section id="contact" class="scrollsections">
+	<div class="title">CONTACT</div>
+</section>
+
+<section id="other" class="scrollsections">
+	<div class="title">OTHER</div>
+</section>
+
+<section id="clients" class="scrollsections">
+	<div class="title">CLIENTS</div>
+</section>
+
+<section id="bio" class="scrollsections">
+	<div class="title">BIO</div>
+</section>
+
+<section id="networks" class="scrollsections">
+	<div class="title">NETWORKS</div>
+</section>
+	
+<!-- jQuery Version 1.11.3 -->
+<script src="src/js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="src/js/bootstrap.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="src/js/custom-scroll.js"></script>
+<script src="src/js/jquery.mousewheel.min.js"></script>
+<script src="src/js/jquery.scrollSections-0.4.3.min.js"></script>
+<script src="src/js/animation.js"></script>
+<script>
+$(function() {	
+	$('section.scrollsections .title').hide(); // Hide all titles
+	$('section.scrollsections').scrollSections({
+		alwaysStartWithFirstSection : true,
+		scrollMax: 1,
+		speed: 600,
+		
+		before: function($currentSection, $nextSection){
+			_initFuturSection($nextSection);
+		},
+		
+		after: function($currentSection, $previousSection){
+			_initNewSection($currentSection, $previousSection);
+		}
+	});
+	function _initNewSection($section, $prevSection){
+		// Do some stuff each time this new section ends animating
+		
+		// Only if there is a previous section (its null on first scroll)
+		if($prevSection){
+			$('.title', $prevSection).hide(); // Hide old section title
+		}
+		$('.title', $section).fadeIn(); // Fade in current section title
+		
+		// Do some stuffs only on first init
+		if( !$section.data('isInit') ){
+			// Create slider for example
+			// $('.selector', $section).slider();
+			// Singleton
+			$section.data('isInit', true);
+		}
+	}
+	function _initFuturSection($section){
+		// Do some stuff each time before this section appears
+		$('.title', $section).hide();
+	}
+});
+</script>
+
+</body>
+</html>
