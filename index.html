@@ -34,7 +34,7 @@
 </head>
 <body>
 <section id="home" class="scrollsections">
-	<div class="home-title"><img src="src/img/bisa-logo-white.png" style="width: 200px"/></div>
+	<div class="title home-title"><img src="src/img/bisa-logo-white.png" style="width: 200px"/></div>
 	<div class="hidden-title text-center">Berkeley Indonesian Student Association</div>
 </section>
 
@@ -103,7 +103,6 @@
 <script>
 $(function() {	
 	$('section.scrollsections .title .info-section').hide(); // Hide all titles
-	$('.home-title').hide(); 
 	$('.hidden-title').hide();
 	$('.info-section').hide(); 
 	$('.about-text').hide(); 
@@ -128,15 +127,14 @@ $(function() {
 		if($prevSection){
 			$('.title', $prevSection).hide(); // Hide old section title
 			$('.info-section', $prevSection).hide(); 
-			$('.about-text', $prevSection).hide(); 
-			$('.home-title', $prevSection).hide();
+			$('.about-text', $prevSection).hide();
 			$('.hidden-title', $prevSection).hide();
 		}
 		$('.title', $section).fadeIn(); // Fade in current section title
-		$('.home-title', $section).fadeIn(); 
 		$('.info-section', $section).fadeIn(); 
 		$('.about-text', $section).fadeIn();
 		window.setTimeout(function() {
+			console.log("hidden-title: animated fadeInLeft");
 			$('.hidden-title').addClass("animated fadeInLeft");
 			$('.hidden-title').show();
 		}, 1500);
