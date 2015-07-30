@@ -22,6 +22,7 @@
     <link href="src/css/jquery.scrollSections-0.4.3.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <link href="src/css/style.css" rel="stylesheet">
+    <link href="src/css/animate.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,7 +34,7 @@
 </head>
 <body>
 <section id="home" class="scrollsections">
-	<div class="title"><img src="src/img/bisa-logo-white.png" style="width: 200px"/></div>
+	<div class="home-title"><img src="src/img/bisa-logo-white.png" style="width: 200px"/></div>
 	<div class="hidden-title text-center">Berkeley Indonesian Student Association</div>
 </section>
 
@@ -52,7 +53,20 @@
 </section>
 
 <section id="works" class="scrollsections">
-	<div class="title">WORK</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+				<div class="info-officer-photo photo-bw">
+					<img src="src/img/officer/philmon.png" data-trigger="officer-philmon" class="photo-officer"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="info-officer-wrapper text-center">
+		<div class="info-officer-group officer-philmon">
+			<div class="info-officer-name">Philmon Samuel Tanuri</div>
+		</div>
+	</div>
 </section>
 
 <section id="contact" class="scrollsections">
@@ -89,11 +103,13 @@
 <script>
 $(function() {	
 	$('section.scrollsections .title .info-section').hide(); // Hide all titles
+	$('.home-title').hide(); 
+	$('.hidden-title').hide();
 	$('.info-section').hide(); 
 	$('.about-text').hide(); 
 
 	$('section.scrollsections').scrollSections({
-		alwaysStartWithFirstSection : true,
+		alwaysStartWithFirstSection : false,
 		scrollMax: 1,
 		speed: 600,
 		
@@ -113,10 +129,17 @@ $(function() {
 			$('.title', $prevSection).hide(); // Hide old section title
 			$('.info-section', $prevSection).hide(); 
 			$('.about-text', $prevSection).hide(); 
+			$('.home-title', $prevSection).hide();
+			$('.hidden-title', $prevSection).hide();
 		}
 		$('.title', $section).fadeIn(); // Fade in current section title
+		$('.home-title', $section).fadeIn(); 
 		$('.info-section', $section).fadeIn(); 
 		$('.about-text', $section).fadeIn();
+		window.setTimeout(function() {
+			$('.hidden-title').addClass("animated fadeInLeft");
+			$('.hidden-title').show();
+		}, 1500);
 		
 		// Do some stuffs only on first init
 		if( !$section.data('isInit') ){

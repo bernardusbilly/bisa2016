@@ -13,22 +13,23 @@ body {
 	background-repeat: no-repeat;
 }
 #works {
-	background-color: #222222;
+	background-color: #111111;
 }
 #other {
-	background-color: #333333;
+	background-color: #222222;
 }
 #contact {
-	background-color: #444444;
+	background-color: #333333;
 }
 #clients {
-	background-color: #555555;
+	background-color: #444444;
 }
 #bio {
-	background-color: #666666;
+	background-color: #555555;
 }
 
 .title,
+.home-title,
 .hidden-title {
 	font-size: 50px;
 	position: absolute;
@@ -56,4 +57,25 @@ body {
 	left: 50%;
 	width: 500px;
 	margin:-80px 0 0 -400px;
+}
+
+.photo-officer {
+	margin-top: 200px;
+	width: 100%;
+}
+.photo-bw {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.info-officer-wrapper {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	width: 400px;
+	margin: -50px 0 0 -200px;
+}
+
+.info-officer-name {
+	font-size: 20px;
 }
