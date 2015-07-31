@@ -16,11 +16,13 @@ $(window).ready(function() {
 		var name = $(this).children().attr('data-trigger');
 		/*console.log($(this).children().next());*/
 		/*$(this).children().next().css("font-size", "40px");*/
-		$('.'+name).show();
-		$('.'+name+ " .info-officer-name").removeClass("animated fadeOutRight");
-		$('.'+name+ " .info-officer-name").addClass("animated fadeInLeft");
-		$('.'+name+ " .info-officer-pos").removeClass("animated fadeOutDown");
-		$('.'+name+ " .info-officer-pos").addClass("animated fadeInUp");
+		
+			$('.'+name).show();
+			$('.'+name+ " .info-officer-name").removeClass("animated fadeOutRight");
+			$('.'+name+ " .info-officer-name").addClass("animated fadeInLeft");
+			$('.'+name+ " .info-officer-pos").removeClass("animated fadeOutDown");
+			$('.'+name+ " .info-officer-pos").addClass("animated fadeInUp");
+		
 		$(this).removeClass("photo-bw");
 	}, function() {
 		// leave hover
