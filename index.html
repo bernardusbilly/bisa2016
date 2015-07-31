@@ -34,7 +34,7 @@
 </head>
 <body>
 <section id="home" class="scrollsections">
-	<div class="title home-title"><img src="src/img/bisa-logo-white.png" style="width: 200px"/></div>
+	<div class="section-text home-title"><img src="src/img/bisa-logo-white.png" style="width: 200px"/></div>
 	<div class="hidden-title text-center">Berkeley Indonesian Student Association</div>
 </section>
 
@@ -42,7 +42,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-offset-1 col-lg-6 col-md-8 col-sm-8 col-xs-10">
-				<div class="about-text text-justify">
+				<div class="section-text about-text text-justify">
 					The Berkeley Indonesian Student Association (BISA) was established in 1991. Over the past two decades, it has gone through a series of changes with the purpose of creating stronger friendships between Indonesian students in the UC Berkeley campus.
 			        <br><br>
 			        BISA is created by the students and for the students. Through continuously building a larger and closer community, we aim to support each other as the people we are now and the people we will soon become.
@@ -52,7 +52,8 @@
 	</div>
 </section>
 
-<section id="works" class="scrollsections">
+<section id="officer" class="scrollsections">
+	<div class="section-text officer-title text-center">Officer</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
@@ -65,6 +66,7 @@
 	<div class="info-officer-wrapper text-center">
 		<div class="info-officer-group officer-philmon">
 			<div class="info-officer-name">Philmon Samuel Tanuri</div>
+			<div class="info-officer-pos">BISA President</div
 		</div>
 	</div>
 </section>
@@ -102,10 +104,8 @@
 <script src="src/js/animation.js"></script>
 <script>
 $(function() {	
-	$('section.scrollsections .title .info-section').hide(); // Hide all titles
+	$('section.scrollsections .title .section-text').hide(); // Hide all titles
 	$('.hidden-title').hide();
-	$('.info-section').hide(); 
-	$('.about-text').hide(); 
 
 	$('section.scrollsections').scrollSections({
 		alwaysStartWithFirstSection : false,
@@ -125,14 +125,10 @@ $(function() {
 		
 		// Only if there is a previous section (its null on first scroll)
 		if($prevSection){
-			$('.title', $prevSection).hide(); // Hide old section title
-			$('.info-section', $prevSection).hide(); 
-			$('.about-text', $prevSection).hide();
+			$('.section-text', $prevSection).hide(); // Hide old section title
 			$('.hidden-title', $prevSection).hide();
 		}
-		$('.title', $section).fadeIn(); // Fade in current section title
-		$('.info-section', $section).fadeIn(); 
-		$('.about-text', $section).fadeIn();
+		$('.section-text', $section).fadeIn(); // Fade in current section title
 		window.setTimeout(function() {
 			console.log("hidden-title: animated fadeInLeft");
 			$('.hidden-title').addClass("animated fadeInLeft");
@@ -149,7 +145,7 @@ $(function() {
 	}
 	function _initFuturSection($section){
 		// Do some stuff each time before this section appears
-		$('.title', $section).hide();
+		$('.section-text', $section).hide();
 	}
 });
 </script>
