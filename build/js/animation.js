@@ -18,7 +18,10 @@ $(window).ready(function() {
 	$('.about-text-wrapper').css("height", winHeight+"px");
 	$('.about-text-wrapper').css("margin-top", -marginAboutText+"px");
 	$('.info-officer-photo').css("height", winHeight+"px");
-	$('.photo-officer').css("margin-top", -marginPhotoHeight+"px");
+	clearTimeout(timer);
+	timer = setTimeout(function() {
+        $('.photo-officer').css("margin-top", -marginPhotoHeight+"px");
+    }, 200);
 
 	$(window).resize(function() {
 		winHeight = $(window).height();
@@ -26,7 +29,7 @@ $(window).ready(function() {
 		clearTimeout(timer);
 	    timer = setTimeout(function() {
 	        $('.info-officer-photo').css("height", winHeight+"px");
-	        $('.info-officer-photo').css("margin-top", -marginPhotoHeight);
+	        $('.photo-officer').css("margin-top", -marginPhotoHeight+"px");
 	    }, 200);
 	});
 
