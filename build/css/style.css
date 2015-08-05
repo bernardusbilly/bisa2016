@@ -39,7 +39,7 @@ body {
   top: 50%;
   left: 50%;
   width: 200px;
-  margin: -170px 0 0 -100px;
+  margin: -250px 0 0 -100px;
 }
 #officer .info-officer-photo {
   position: relative;
@@ -73,22 +73,34 @@ body {
 #officer .info-officer-wrapper .info-officer-group .info-officer-pos {
   font-size: 12px;
 }
-#contact {
+#gallery {
   background-color: #222222;
 }
-#other {
+#gallery .gallery-title-wrapper {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1800px;
+  height: 400px;
+  margin: -200px 0 0 -900px;
+  z-index: 1;
+  color: #EEEEEE;
+  cursor: pointer;
+  text-decoration: none;
+}
+#gallery .gallery-title-wrapper .gallery-title {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 140px;
+}
+#gallery .gallery-title-wrapper:hover {
+  color: #EEEEEE;
+}
+#contact {
   background-color: #333333;
 }
-#clients {
-  background-color: #444444;
-}
-#bio {
-  background-color: #555555;
-}
-#networks {
-  background-color: #666666;
-}
-.contact-title {
+#contact .contact-title {
   font-size: 16px;
   line-height: 30px;
   position: absolute;

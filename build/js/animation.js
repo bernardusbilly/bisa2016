@@ -10,26 +10,30 @@ $(window).ready(function() {
 	}, 1500);
 
 	// set the height for a particular section
+
 	var winHeight = $(window).height();
 	var timer;
 	var marginPhotoHeight = $('.photo-officer').height()/2;
-	var marginAboutText = $('.about-text').height()/2;
+	var marginAboutText = $('.about-text').height() * 2/3;
 
 	$('.about-text-wrapper').css("height", winHeight+"px");
-	$('.about-text-wrapper').css("margin-top", -marginAboutText+"px");
 	$('.info-officer-photo').css("height", winHeight+"px");
 	clearTimeout(timer);
 	timer = setTimeout(function() {
         $('.photo-officer').css("margin-top", -marginPhotoHeight+"px");
+        $('.about-text').css("margin-top", -marginAboutText+"px");
     }, 200);
 
 	$(window).resize(function() {
 		winHeight = $(window).height();
-		var marginPhotoHeight = $('.photo-officer').height()/2;
+		marginPhotoHeight = $('.photo-officer').height()/2;
+		marginAboutText = $('.about-text').height() * 2/3;
 		clearTimeout(timer);
 	    timer = setTimeout(function() {
-	        $('.info-officer-photo').css("height", winHeight+"px");
+	    	$('.about-text-wrapper').css("height", winHeight+"px");
+	    	$('.info-officer-photo').css("height", winHeight+"px");
 	        $('.photo-officer').css("margin-top", -marginPhotoHeight+"px");
+	        $('.about-text').css("margin-top", -marginAboutText+"px");
 	    }, 200);
 	});
 
@@ -38,8 +42,7 @@ $(window).ready(function() {
 	$('.info-officer-group').hide();
 	$('.info-officer-photo').hover(function() {
 		var name = $(this).children().attr('data-trigger');
-		/*console.log($(this).children().next());*/
-		/*$(this).children().next().css("font-size", "40px");*/
+		// enter hover
 		$('.'+name).show();
 		$('.'+name+ " .info-officer-name").removeClass("animated fadeOutRight");
 		$('.'+name+ " .info-officer-name").addClass("animated fadeInLeft");
@@ -54,5 +57,18 @@ $(window).ready(function() {
 		$('.'+name+ " .info-officer-pos").removeClass("animated fadeInUp");
 		$('.'+name+ " .info-officer-pos").addClass("animated fadeOutDown");
 		$(this).children().addClass("photo-bw");
+	});
+
+	// gallery section
+	$('.gallery-title').hide()
+	$('.gallery-title-wrapper').hover(function() {
+		// enter hover
+		$('.gallery-title').show();
+		$('.gallery-title').removeClass("animated bounceOut");
+		$('.gallery-title').addClass("animated bounceIn");
+	}, function() {
+		// leave hover
+		$('.gallery-title').removeClass("animated bounceIn");
+		$('.gallery-title').addClass("animated bounceOut");
 	});
 });

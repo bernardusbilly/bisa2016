@@ -1,0 +1,178 @@
+/* fill in part */
+
+@background : 3; // number of background
+@timer      : 6; // in second
+
+/* end of fill in part */
+
+@total      : @background * @timer;
+@time-length: e("@{total}s");
+@phase-one  : round(percentage(1/(3 * @background)));
+@phase-two  : round(percentage(1/@background));
+@phase-three: @phase-one + @phase-two;
+
+.slidebackground {
+    position: static;
+    .background {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        -webkit-animation: animation @time-length linear infinite;
+        -moz-animation: animation @time-length linear infinite;
+        -o-animation: animation @time-length linear infinite;
+        -ms-animation: animation @time-length linear infinite;
+        animation: animation @time-length linear infinite;
+        background-position: center;
+    }
+    .bw {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    .background:nth-child(2) {
+        @delay: 1 * @timer;
+        -webkit-animation-delay: e("@{delay}s");
+        -moz-animation-delay: e("@{delay}s");
+        -o-animation-delay: e("@{delay}s");
+        -ms-animation-delay: e("@{delay}s");
+        animation-delay: e("@{delay}s");
+    }
+    .background:nth-child(3) {
+        @delay: 2 * @timer;
+        -webkit-animation-delay: e("@{delay}s");
+        -moz-animation-delay: e("@{delay}s");
+        -o-animation-delay: e("@{delay}s");
+        -ms-animation-delay: e("@{delay}s");
+        animation-delay: e("@{delay}s");
+    }
+    .background:nth-child(4) {
+        @delay: 3 * @timer;
+        -webkit-animation-delay: e("@{delay}s");
+        -moz-animation-delay: e("@{delay}s");
+        -o-animation-delay: e("@{delay}s");
+        -ms-animation-delay: e("@{delay}s");
+        animation-delay: e("@{delay}s");
+    }
+    .background:nth-child(5) {
+        @delay: 4 * @timer;
+        -webkit-animation-delay: e("@{delay}s");
+        -moz-animation-delay: e("@{delay}s");
+        -o-animation-delay: e("@{delay}s");
+        -ms-animation-delay: e("@{delay}s");
+        animation-delay: e("@{delay}s");
+    }
+    .background:nth-child(6) {
+        @delay: 5 * @timer;
+        -webkit-animation-delay: e("@{delay}s");
+        -moz-animation-delay: e("@{delay}s");
+        -o-animation-delay: e("@{delay}s");
+        -ms-animation-delay: e("@{delay}s");
+        animation-delay: e("@{delay}s");
+    }
+    .background:nth-child(7) {
+        @delay: 6 * @timer;
+        -webkit-animation-delay: e("@{delay}s");
+        -moz-animation-delay: e("@{delay}s");
+        -o-animation-delay: e("@{delay}s");
+        -ms-animation-delay: e("@{delay}s");
+        animation-delay: e("@{delay}s");
+    }
+    .background:nth-child(8) {
+        @delay: 7 * @timer;
+        -webkit-animation-delay: e("@{delay}s");
+        -moz-animation-delay: e("@{delay}s");
+        -o-animation-delay: e("@{delay}s");
+        -ms-animation-delay: e("@{delay}s");
+        animation-delay: e("@{delay}s");
+    }
+    .background:nth-child(9) {
+        @delay: 8 * @timer;
+        -webkit-animation-delay: e("@{delay}s");
+        -moz-animation-delay: e("@{delay}s");
+        -o-animation-delay: e("@{delay}s");
+        -ms-animation-delay: e("@{delay}s");
+        animation-delay: e("@{delay}s");
+    }
+    .background:nth-child(10) {
+        @delay: 9 * @timer;
+        -webkit-animation-delay: e("@{delay}s");
+        -moz-animation-delay: e("@{delay}s");
+        -o-animation-delay: e("@{delay}s");
+        -ms-animation-delay: e("@{delay}s");
+        animation-delay: e("@{delay}s");
+    }
+}
+.slidebackground:before,
+.slidebackground:after { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.slidebackground:before { 
+    background-image: url(../img/black-bg.png); 
+}
+.slidebackground:after { 
+    background: transparent url(../img/pattern.png) repeat top left; 
+}
+
+/* parts you don't want to read */
+
+@-webkit-keyframes animation { 
+    0% { opacity: 0;
+        -webkit-animation-timing-function: ease-in-out }
+    @{phase-one} { opacity: 1;
+        -webkit-animation-timing-function: ease-in-out }
+    @{phase-two} { opacity: 1; }
+    @{phase-three} { opacity: 0;
+        -webkit-animation-timing-function: ease-in-out }
+    100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+    0% { opacity: 0;
+        -moz-animation-timing-function: ease-in-out }
+    @{phase-one} { opacity: 1;
+        -moz-animation-timing-function: ease-in-out }
+    @{phase-two} { opacity: 1; }
+    @{phase-three} { opacity: 0;
+        -moz-animation-timing-function: ease-in-out }
+    100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation {
+    0% { opacity: 0;
+        -o-animation-timing-function: ease-in-out }
+    @{phase-one} { opacity: 1;
+        -o-animation-timing-function: ease-in-out }
+    @{phase-two} { opacity: 1; }
+    @{phase-three} { opacity: 0;
+        -o-animation-timing-function: ease-in-out }
+    100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation {
+    0% { opacity: 0;
+        -ms-animation-timing-function: ease-in-out }
+    @{phase-one} { opacity: 1;
+        -ms-animation-timing-function: ease-in-out }
+    @{phase-two} { opacity: 1; }
+    @{phase-three} { opacity: 0;
+        -ms-animation-timing-function: ease-in-out }
+    100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0;
+        animation-timing-function: ease-in-out }
+    @{phase-one} { opacity: 1;
+        animation-timing-function: ease-in-out }
+    @{phase-two} { opacity: 1; }
+    @{phase-three} { opacity: 0;
+        animation-timing-function: ease-in-out }
+    100% { opacity: 0 }
+}
