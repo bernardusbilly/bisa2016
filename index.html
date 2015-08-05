@@ -10,19 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="BISA Webpage: The Berkeley Indonesian Student Association (BISA) was established in 1991. Over the past two decades, it has gone through a series of changes with the purpose of creating stronger friendships between Indonesian students in the UC Berkeley campus.">
     <meta name="author" content="Billy Tjiptoning">
-    <meta property="og:image" content="./src/img/preview.png" />
-    <link rel="icon" type="image/png" href="./src/img/favicon.png">
+    <meta property="og:image" content="./build/img/preview.png" />
+    <link rel="icon" type="image/png" href="./build/img/favicon.png">
 
     <title>BISA Webpage</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="build/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="src/css/jquery.scrollSections-0.4.3.min.css" rel="stylesheet">
+    <link href="build/css/jquery.scrollSections-0.4.3.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-    <link href="src/css/style.css" rel="stylesheet">
-    <link href="src/css/animate.css" rel="stylesheet">
+    <link href="build/css/style.css" rel="stylesheet">
+    <link href="build/css/animate.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,7 +34,7 @@
 </head>
 <body>
 <section id="home" class="scrollsections">
-	<div class="section-text home-title"><img src="src/img/bisa-logo-white.png" style="width: 200px"/></div>
+	<div class="section-text home-title"><img src="build/img/bisa-logo-white.png" style="width: 200px"/></div>
 	<div class="hidden-title text-center">Berkeley Indonesian Student Association</div>
 </section>
 
@@ -42,10 +42,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-offset-1 col-lg-6 col-md-8 col-sm-8 col-xs-10">
-				<div class="section-text about-text text-justify">
-					The Berkeley Indonesian Student Association (BISA) was established in 1991. Over the past two decades, it has gone through a series of changes with the purpose of creating stronger friendships between Indonesian students in the UC Berkeley campus.
-			        <br><br>
-			        BISA is created by the students and for the students. Through continuously building a larger and closer community, we aim to support each other as the people we are now and the people we will soon become.
+				<div class="section-text about-text-wrapper text-justify">
+					<div class="about-text">
+						The Berkeley Indonesian Student Association (BISA) was established in 1991. Over the past two decades, it has gone through a series of changes with the purpose of creating stronger friendships between Indonesian students in the UC Berkeley campus.
+				        <br><br>
+				        BISA is created by the students and for the students. Through continuously building a larger and closer community, we aim to support each other as the people we are now and the people we will soon become.
+				    </div>
 				</div>
 			</div>
 		</div>
@@ -53,17 +55,17 @@
 </section>
 
 <section id="officer" class="scrollsections">
-	<div class="section-text officer-title text-center">Officer</div>
+	<div class="section-text officer-title text-center">Officers</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
-				<div class="info-officer-photo photo-bw">
-					<img src="src/img/officer/philmon.png" data-trigger="officer-philmon" class="photo-officer"/>
+				<div class="info-officer-photo">
+					<img src="build/img/officer/philmon.png" data-trigger="officer-philmon" class="photo-officer photo-bw"/>
 				</div>
 			</div>
 			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
-				<div class="info-officer-photo photo-bw">
-					<img src="src/img/officer/farrah.png" data-trigger="officer-farrah" class="photo-officer"/>
+				<div class="info-officer-photo">
+					<img src="build/img/officer/farrah.png" data-trigger="officer-farrah" class="photo-officer photo-bw"/>
 				</div>
 			</div>
 		</div>
@@ -104,16 +106,16 @@
 </section>
 	
 <!-- jQuery Version 1.11.3 -->
-<script src="src/js/jquery-1.11.3.js"></script>
+<script src="build/js/jquery-1.11.3.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="src/js/bootstrap.min.js"></script>
+<script src="build/js/bootstrap.min.js"></script>
 
 <!-- Custom JavaScript -->
-<script src="src/js/custom-scroll.js"></script>
-<script src="src/js/jquery.mousewheel.min.js"></script>
-<script src="src/js/jquery.scrollSections-0.4.3.min.js"></script>
-<script src="src/js/animation.js"></script>
+<script src="build/js/custom-scroll.js"></script>
+<script src="build/js/jquery.mousewheel.min.js"></script>
+<script src="build/js/jquery.scrollSections-0.4.3.min.js"></script>
+<script src="build/js/animation.js"></script>
 <script>
 $(function() {	
 	$('section.scrollsections .title .section-text').hide(); // Hide all titles
