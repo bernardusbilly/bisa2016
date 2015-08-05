@@ -18,7 +18,7 @@ $(window).ready(function() {
 	$('.about-text-wrapper').css("height", winHeight+"px");
 	$('.about-text-wrapper').css("margin-top", -marginAboutText+"px");
 	$('.info-officer-photo').css("height", winHeight+"px");
-	$('.info-officer-photo').css("margin-top", -marginPhotoHeight+"px");
+	$('.photo-officer').css("margin-top", -marginPhotoHeight+"px");
 
 	$(window).resize(function() {
 		winHeight = $(window).height();
@@ -27,7 +27,7 @@ $(window).ready(function() {
 	    timer = setTimeout(function() {
 	        $('.info-officer-photo').css("height", winHeight+"px");
 	        $('.info-officer-photo').css("margin-top", -marginPhotoHeight);
-	    },200);
+	    }, 200);
 	});
 
 	// information per officer
