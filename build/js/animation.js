@@ -14,6 +14,7 @@ $(window).ready(function() {
 	var winHeight = $(window).height();
 	var timer;
 	var marginPhotoHeight = $('.photo-officer').height()/2;
+	console.log(marginPhotoHeight);
 	var marginAboutText = $('.about-text').height() * 2/3;
 
 	$('.about-text-wrapper').css("height", winHeight+"px");
