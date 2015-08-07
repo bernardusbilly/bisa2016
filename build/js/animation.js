@@ -1,4 +1,4 @@
-$(window).ready(function() {
+$(window).load(function() {
 
 	// animate in any current section
 
