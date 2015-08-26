@@ -1,20 +1,21 @@
+$(window).ready(function() {
+	$('.hidden-title').hide();
+	$('.about-text').hide();
+	$('.officer-title').hide();
+	$('.gallery-title').hide();
+});
+
 $(window).load(function() {
 
-	// animate in any current section
+	$('.hidden-title').show();
+	$('.hidden-title').addClass("animated fadeInLeft");
 
-	$('.section-text').hide(); // Fade in current section title
-	$('.section-text').fadeIn();
-	window.setTimeout(function() {
-		$('.hidden-title').addClass("animated fadeInLeft");
-		$('.hidden-title').show();
-	}, 1500);
-
-	// set the height for a particular section
+	/*
+	set the height for a particular section -- automatic by fullpage
 
 	var winHeight = $(window).height();
 	var timer;
 	var marginPhotoHeight = $('.photo-officer').height()/2;
-	console.log(marginPhotoHeight);
 	var marginAboutText = $('.about-text').height() * 2/3;
 
 	$('.about-text-wrapper').css("height", winHeight+"px");
@@ -36,7 +37,7 @@ $(window).load(function() {
 	        $('.photo-officer').css("margin-top", -marginPhotoHeight+"px");
 	        $('.about-text').css("margin-top", -marginAboutText+"px");
 	    }, 200);
-	});
+	});*/
 
 	// information per officer
 
@@ -58,18 +59,5 @@ $(window).load(function() {
 		$('.'+name+ " .info-officer-pos").removeClass("animated fadeInUp");
 		$('.'+name+ " .info-officer-pos").addClass("animated fadeOutDown");
 		$(this).children().addClass("photo-bw");
-	});
-
-	// gallery section
-	$('.gallery-title').hide()
-	$('.gallery-title-wrapper').hover(function() {
-		// enter hover
-		$('.gallery-title').show();
-		$('.gallery-title').removeClass("animated bounceOut");
-		$('.gallery-title').addClass("animated bounceIn");
-	}, function() {
-		// leave hover
-		$('.gallery-title').removeClass("animated bounceIn");
-		$('.gallery-title').addClass("animated bounceOut");
 	});
 });

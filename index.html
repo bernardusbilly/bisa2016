@@ -19,11 +19,13 @@
     <link href="build/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="build/css/jquery.scrollSections-0.4.3.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href="build/css/jquery.fullPage.css" rel="stylesheet">
     <link href="build/css/slidebackground.css" rel="stylesheet">
     <link href="build/css/style.css" rel="stylesheet">
     <link href="build/css/animate.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -35,132 +37,160 @@
 
 </head>
 <body>
-<section id="home" class="scrollsections">
-	<div class="section-text home-title"><img src="build/img/bisa-logo-white.png" style="width: 200px"/></div>
-	<div class="hidden-title text-center">Berkeley Indonesian Student Association</div>
-</section>
+<div id="fullpage">
+	<section id="home" class="section">
+		<div class="home-title"><img src="build/img/bisa-logo-white.png" style="width: 200px"/></div>
+		<div class="hidden-title text-center">Berkeley Indonesian Student Association</div>
+	</section>
 
-<section id="about" class="scrollsections">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-offset-1 col-lg-6 col-md-8 col-sm-8 col-xs-10">
-				<div class="section-text about-text-wrapper text-justify">
-					<div class="about-text">
-						The Berkeley Indonesian Student Association (BISA) was established in 1991. Over the past two decades, it has gone through a series of changes with the purpose of creating stronger friendships between Indonesian students in the UC Berkeley campus.
-				        <br><br>
-				        BISA is created by the students and for the students. Through continuously building a larger and closer community, we aim to support each other as the people we are now and the people we will soon become.
-				    </div>
+	<section id="about" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-offset-1 col-lg-6 col-md-8 col-sm-8 col-xs-10">
+					<div class="about-text-wrapper text-justify">
+						<div class="about-text">
+							The Berkeley Indonesian Student Association (BISA) was established in 1991. Over the past two decades, it has gone through a series of changes with the purpose of creating stronger friendships between Indonesian students in the UC Berkeley campus.
+					        <br><br>
+					        BISA is created by the students and for the students. Through continuously building a larger and closer community, we aim to support each other as the people we are now and the people we will soon become.
+					    </div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section id="officer" class="scrollsections">
-	<div class="section-text officer-title text-center">Officers</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
-				<div class="info-officer-photo">
-					<img src="build/img/officer/philmon.png" data-trigger="officer-philmon" class="photo-officer photo-bw"/>
+	<section id="officer" class="section">
+		<div class="officer-title text-center">Officers</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+					<div class="info-officer-photo">
+						<img src="build/img/officer/philmon.png" data-trigger="officer-philmon" class="photo-officer photo-bw"/>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+					<div class="info-officer-photo">
+						<img src="build/img/officer/farrah.png" data-trigger="officer-farrah" class="photo-officer photo-bw"/>
+					</div>
 				</div>
 			</div>
-			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
-				<div class="info-officer-photo">
-					<img src="build/img/officer/farrah.png" data-trigger="officer-farrah" class="photo-officer photo-bw"/>
-				</div>
+		</div>
+		<div class="info-officer-wrapper text-center">
+			<div class="info-officer-group officer-philmon">
+				<div class="info-officer-name">Philmon Samuel Tanuri</div>
+				<div class="info-officer-pos">President</div>
+			</div>
+			<div class="info-officer-group officer-farrah">
+				<div class="info-officer-name">Farrah Tiffany Steven</div>
+				<div class="info-officer-pos">Secretary</div>
 			</div>
 		</div>
-	</div>
-	<div class="info-officer-wrapper text-center">
-		<div class="info-officer-group officer-philmon">
-			<div class="info-officer-name">Philmon Samuel Tanuri</div>
-			<div class="info-officer-pos">President</div>
-		</div>
-		<div class="info-officer-group officer-farrah">
-			<div class="info-officer-name">Farrah Tiffany Steven</div>
-			<div class="info-officer-pos">Secretary</div>
-		</div>
-	</div>
-</section>
+	</section>
 
-<section id="gallery" class="scrollsections">
-	<a href="https://www.facebook.com/groups/BISABerkeley/photos/" target="_blank" class="gallery-title-wrapper">
-		<div class="gallery-title">
-			<span class="glyphicon glyphicon-camera"></span>
-			Gallery
+	<section id="gallery" class="section">
+		<a href="https://www.facebook.com/groups/BISABerkeley/photos/" target="_blank" class="gallery-title-wrapper">
+			<div class="gallery-title">
+				<span class="glyphicon glyphicon-camera"></span>
+				Gallery
+			</div>
+		</a>
+		<div class="slidebackground">
+			<div class="background bw" style="background-image: url(build/img/bisa_2012.jpg);"></div>
+			<div class="background bw" style="background-image: url(build/img/bisa_2013.jpg);"></div>
+			<div class="background bw" style="background-image: url(build/img/bisa_2014.jpg);"></div>
 		</div>
-	</a>
-	<div class="slidebackground">
-		<div class="background bw" style="background-image: url(build/img/bisa_2012.jpg);"></div>
-		<div class="background bw" style="background-image: url(build/img/bisa_2013.jpg);"></div>
-		<div class="background bw" style="background-image: url(build/img/bisa_2014.jpg);"></div>
-	</div>
-</section>
+	</section>
 
-<section id="contact" class="scrollsections">
-	<div class="section-text contact-title text-center">
-		<span class="glyphicon glyphicon-phone"></span> +1 (234) 567-8910 <br>
-		<span class="glyphicon glyphicon-envelope"></span> admin@bisa.berkeley.edu
-	</div>
-</section>
-	
+	<section id="contact" class="section">
+		<div class="contact-title text-center">
+			<span class="glyphicon glyphicon-phone"></span> +1 (234) 567-8910 <br>
+			<span class="glyphicon glyphicon-envelope"></span> admin@bisa.berkeley.edu
+		</div>
+	</section>
+</div>
 <!-- jQuery Version 1.11.3 -->
-<script src="build/js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="build/js/jquery-1.11.3.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="build/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="build/js/bootstrap.min.js"></script>
+
+<!-- Fullpage JavaScript -->
+<script type="text/javascript" src="build/js/jquery.fullPage.js"></script>
 
 <!-- Custom JavaScript -->
-<script src="build/js/custom-scroll.js"></script>
-<script src="build/js/jquery.mousewheel.min.js"></script>
-<script src="build/js/jquery.scrollSections-0.4.3.min.js"></script>
-<script src="build/js/animation.js"></script>
+<script type="text/javascript" src="build/js/animation.js"></script>
 <script>
-$(function() {	
-	$('section.scrollsections .title .section-text').hide(); // Hide all titles
-	$('.hidden-title').hide();
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+    	//Navigation
+        menu: false,
+        lockAnchors: true,
+        anchors:['home', 'about', 'officer', 'gallery', 'contact'],
+        navigation: true,
+        navigationPosition: 'right',
+        showActiveTooltip: true,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+        loopHorizontal: false,
 
-	$('section.scrollsections').scrollSections({
-		alwaysStartWithFirstSection : false,
-		scrollMax: 1,
-		speed: 600,
-		
-		before: function($currentSection, $nextSection){
-			_initFuturSection($nextSection);
-		},
-		
-		after: function($currentSection, $previousSection){
-			_initNewSection($currentSection, $previousSection);
-		}
-	});
-	function _initNewSection($section, $prevSection){
-		// Do some stuff each time this new section ends animating
-		
-		// Only if there is a previous section (its null on first scroll)
-		if($prevSection){
-			$('.section-text', $prevSection).hide(); // Hide old section title
-			$('.hidden-title', $prevSection).hide();
-		}
-		$('.section-text', $section).fadeIn(); // Fade in current section title
-		window.setTimeout(function() {
-			console.log("hidden-title: animated fadeInLeft");
-			$('.hidden-title').addClass("animated fadeInLeft");
-			$('.hidden-title').show();
-		}, 1500);
-		
-		// Do some stuffs only on first init
-		if( !$section.data('isInit') ){
-			// Create slider for example
-			// $('.selector', $section).slider();
-			// Singleton
-			$section.data('isInit', true);
-		}
-	}
-	function _initFuturSection($section){
-		// Do some stuff each time before this section appears
-		$('.section-text', $section).hide();
-	}
+        afterLoad: function(anchorLink, index){
+            var loadedSection = $(this);
+
+            if(index == 1){
+            	$('.hidden-title').show();
+				$('.hidden-title').addClass("animated fadeInLeft");
+			}
+
+            if(index == 2){
+                $('.about-text').show();
+				$('.about-text').addClass("animated fadeIn");
+            }
+
+            if(index == 3){
+                $('.officer-title').show();
+				$('.officer-title').addClass("animated bounceInDown");
+            }
+
+            if(index == 4){
+                $('.gallery-title').show();
+				$('.gallery-title').addClass("animated bounceIn");
+            }
+
+            if(index == 5){
+                $('.contact-title').show();
+				$('.contact-title').addClass("animated pulse");
+            }
+        },
+
+        onLeave: function(index, nextIndex, direction){
+            var leavingSection = $(this);
+
+            if(index == 1){
+            	$('.hidden-title').hide();
+				$('.hidden-title').removeClass("animated fadeInLeft");
+			}
+
+            if(index == 2){
+            	$('.about-text').hide();
+				$('.about-text').removeClass("animated fadeIn");
+            }
+
+            if(index == 3){
+                $('.officer-title').hide();
+				$('.officer-title').removeClass("animated bounceInDown");
+            }
+
+            if(index == 4){
+                $('.gallery-title').hide();
+				$('.gallery-title').removeClass("animated bounceIn");
+            }
+
+            if(index == 5){
+                $('.contact-title').hide();
+				$('.contact-title').removeClass("animated pulse");
+            }
+        }
+    });
 });
 </script>
 
