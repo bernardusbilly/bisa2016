@@ -7,8 +7,27 @@ $(window).ready(function() {
 
 $(window).load(function() {
 
-	$('.hidden-title').show();
-	$('.hidden-title').addClass("animated fadeInLeft");
+	// information per officer
+
+	$('.info-officer-group').hide();
+	$('.info-officer-photo').hover(function() {
+		var name = $(this).children().attr('data-trigger');
+		// enter hover
+		$('.'+name).show();
+		$('.'+name+ " .info-officer-name").removeClass("animated fadeOutRight");
+		$('.'+name+ " .info-officer-name").addClass("animated fadeInLeft");
+		$('.'+name+ " .info-officer-pos").removeClass("animated fadeOutDown");
+		$('.'+name+ " .info-officer-pos").addClass("animated fadeInUp");
+		$(this).children().removeClass("photo-bw");
+	}, function() {
+		// leave hover
+		var name = $(this).children().attr('data-trigger');
+		$('.'+name+ " .info-officer-name").removeClass("animated fadeInLeft");
+		$('.'+name+ " .info-officer-name").addClass("animated fadeOutRight");
+		$('.'+name+ " .info-officer-pos").removeClass("animated fadeInUp");
+		$('.'+name+ " .info-officer-pos").addClass("animated fadeOutDown");
+		$(this).children().addClass("photo-bw");
+	});
 
 	/*
 	set the height for a particular section -- automatic by fullpage
@@ -38,26 +57,4 @@ $(window).load(function() {
 	        $('.about-text').css("margin-top", -marginAboutText+"px");
 	    }, 200);
 	});*/
-
-	// information per officer
-
-	$('.info-officer-group').hide();
-	$('.info-officer-photo').hover(function() {
-		var name = $(this).children().attr('data-trigger');
-		// enter hover
-		$('.'+name).show();
-		$('.'+name+ " .info-officer-name").removeClass("animated fadeOutRight");
-		$('.'+name+ " .info-officer-name").addClass("animated fadeInLeft");
-		$('.'+name+ " .info-officer-pos").removeClass("animated fadeOutDown");
-		$('.'+name+ " .info-officer-pos").addClass("animated fadeInUp");
-		$(this).children().removeClass("photo-bw");
-	}, function() {
-		// leave hover
-		var name = $(this).children().attr('data-trigger');
-		$('.'+name+ " .info-officer-name").removeClass("animated fadeInLeft");
-		$('.'+name+ " .info-officer-name").addClass("animated fadeOutRight");
-		$('.'+name+ " .info-officer-pos").removeClass("animated fadeInUp");
-		$('.'+name+ " .info-officer-pos").addClass("animated fadeOutDown");
-		$(this).children().addClass("photo-bw");
-	});
 });
