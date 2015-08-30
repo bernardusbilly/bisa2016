@@ -18,6 +18,10 @@ $(window).load(function() {
 		$('.'+name+ " .info-officer-name").addClass("animated fadeInLeft");
 		$('.'+name+ " .info-officer-pos").removeClass("animated fadeOutDown");
 		$('.'+name+ " .info-officer-pos").addClass("animated fadeInUp");
+		$('.'+name+ " .info-officer-others").removeClass("animated fadeOutDown");
+		$('.'+name+ " .info-officer-others").addClass("animated fadeInUp");
+		$('.'+name+ " .info-officer-socmed").removeClass("animated fadeOutDown");
+		$('.'+name+ " .info-officer-socmed").addClass("animated fadeInUp");
 		$(this).children().removeClass("photo-bw");
 	}, function() {
 		// leave hover
@@ -26,6 +30,10 @@ $(window).load(function() {
 		$('.'+name+ " .info-officer-name").addClass("animated fadeOutRight");
 		$('.'+name+ " .info-officer-pos").removeClass("animated fadeInUp");
 		$('.'+name+ " .info-officer-pos").addClass("animated fadeOutDown");
+		$('.'+name+ " .info-officer-others").removeClass("animated fadeInUp");
+		$('.'+name+ " .info-officer-others").addClass("animated fadeOutDown");
+		$('.'+name+ " .info-officer-socmed").removeClass("animated fadeInUp");
+		$('.'+name+ " .info-officer-socmed").addClass("animated fadeOutDown");
 		$(this).children().addClass("photo-bw");
 	});
 

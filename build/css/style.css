@@ -3,7 +3,7 @@ body {
   color: #EEE;
 }
 #home {
-  background-color: #111111;
+  background-color: #003262;
 }
 #home .home-title,
 #home .hidden-title {
@@ -21,10 +21,12 @@ body {
   margin-left: -250px;
 }
 #about {
-  background: url(../img/sather-tower-2.jpg);
+  background: url(../img/campanile.jpg);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+  color: #333333;
+  font-weight: bold;
 }
 #officer {
   background-color: #111111;
@@ -48,6 +50,12 @@ body {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
+#officer .info-officer-photo .info-officer-socmed {
+  text-align: center;
+}
+#officer .info-officer-photo .info-officer-socmed .socmed {
+  width: 20px;
+}
 #officer .info-officer-wrapper {
   position: absolute;
   top: 50%;
@@ -67,6 +75,9 @@ body {
 }
 #officer .info-officer-wrapper .info-officer-group .info-officer-pos {
   font-size: 12px;
+}
+#officer .info-officer-wrapper .info-officer-group .info-officer-others {
+  font-size: 14px;
 }
 #gallery {
   background-color: #222222;
