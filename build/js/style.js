@@ -10,6 +10,7 @@ $(window).load(function() {
 	// information per officer
 
 	$('.info-officer-group').hide();
+	$('.info-officer-socmed').hide()
 	$('.info-officer-photo').hover(function() {
 		var name = $(this).children().attr('data-trigger');
 		// enter hover
@@ -20,8 +21,9 @@ $(window).load(function() {
 		$('.'+name+ " .info-officer-pos").addClass("animated fadeInUp");
 		$('.'+name+ " .info-officer-others").removeClass("animated fadeOutDown");
 		$('.'+name+ " .info-officer-others").addClass("animated fadeInUp");
-		$('.'+name+ " .info-officer-socmed").removeClass("animated fadeOutDown");
-		$('.'+name+ " .info-officer-socmed").addClass("animated fadeInUp");
+		$(this).children('.info-officer-socmed').show();
+		$(this).children('.info-officer-socmed').removeClass("animated fadeOut");
+		$(this).children('.info-officer-socmed').addClass("animated fadeIn");
 		$(this).children().removeClass("photo-bw");
 	}, function() {
 		// leave hover
@@ -32,8 +34,8 @@ $(window).load(function() {
 		$('.'+name+ " .info-officer-pos").addClass("animated fadeOutDown");
 		$('.'+name+ " .info-officer-others").removeClass("animated fadeInUp");
 		$('.'+name+ " .info-officer-others").addClass("animated fadeOutDown");
-		$('.'+name+ " .info-officer-socmed").removeClass("animated fadeInUp");
-		$('.'+name+ " .info-officer-socmed").addClass("animated fadeOutDown");
+		$(this).children('.info-officer-socmed').removeClass("animated fadeIn");
+		$(this).children('.info-officer-socmed').addClass("animated fadeOut");
 		$(this).children().addClass("photo-bw");
 	});
 

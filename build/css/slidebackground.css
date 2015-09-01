@@ -11,11 +11,11 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  -webkit-animation: animation 18s linear infinite;
-  -moz-animation: animation 18s linear infinite;
-  -o-animation: animation 18s linear infinite;
-  -ms-animation: animation 18s linear infinite;
-  animation: animation 18s linear infinite;
+  -webkit-animation: animation 20s linear infinite;
+  -moz-animation: animation 20s linear infinite;
+  -o-animation: animation 20s linear infinite;
+  -ms-animation: animation 20s linear infinite;
+  animation: animation 20s linear infinite;
   background-position: center;
 }
 .slidebackground .bw {
@@ -26,67 +26,67 @@
   filter: grayscale(100%);
 }
 .slidebackground .background:nth-child(2) {
-  -webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s;
-  -o-animation-delay: 6s;
-  -ms-animation-delay: 6s;
-  animation-delay: 6s;
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  -ms-animation-delay: 5s;
+  animation-delay: 5s;
 }
 .slidebackground .background:nth-child(3) {
-  -webkit-animation-delay: 12s;
-  -moz-animation-delay: 12s;
-  -o-animation-delay: 12s;
-  -ms-animation-delay: 12s;
-  animation-delay: 12s;
+  -webkit-animation-delay: 10s;
+  -moz-animation-delay: 10s;
+  -o-animation-delay: 10s;
+  -ms-animation-delay: 10s;
+  animation-delay: 10s;
 }
 .slidebackground .background:nth-child(4) {
-  -webkit-animation-delay: 18s;
-  -moz-animation-delay: 18s;
-  -o-animation-delay: 18s;
-  -ms-animation-delay: 18s;
-  animation-delay: 18s;
+  -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  -o-animation-delay: 15s;
+  -ms-animation-delay: 15s;
+  animation-delay: 15s;
 }
 .slidebackground .background:nth-child(5) {
-  -webkit-animation-delay: 24s;
-  -moz-animation-delay: 24s;
-  -o-animation-delay: 24s;
-  -ms-animation-delay: 24s;
-  animation-delay: 24s;
+  -webkit-animation-delay: 20s;
+  -moz-animation-delay: 20s;
+  -o-animation-delay: 20s;
+  -ms-animation-delay: 20s;
+  animation-delay: 20s;
 }
 .slidebackground .background:nth-child(6) {
+  -webkit-animation-delay: 25s;
+  -moz-animation-delay: 25s;
+  -o-animation-delay: 25s;
+  -ms-animation-delay: 25s;
+  animation-delay: 25s;
+}
+.slidebackground .background:nth-child(7) {
   -webkit-animation-delay: 30s;
   -moz-animation-delay: 30s;
   -o-animation-delay: 30s;
   -ms-animation-delay: 30s;
   animation-delay: 30s;
 }
-.slidebackground .background:nth-child(7) {
-  -webkit-animation-delay: 36s;
-  -moz-animation-delay: 36s;
-  -o-animation-delay: 36s;
-  -ms-animation-delay: 36s;
-  animation-delay: 36s;
-}
 .slidebackground .background:nth-child(8) {
-  -webkit-animation-delay: 42s;
-  -moz-animation-delay: 42s;
-  -o-animation-delay: 42s;
-  -ms-animation-delay: 42s;
-  animation-delay: 42s;
+  -webkit-animation-delay: 35s;
+  -moz-animation-delay: 35s;
+  -o-animation-delay: 35s;
+  -ms-animation-delay: 35s;
+  animation-delay: 35s;
 }
 .slidebackground .background:nth-child(9) {
-  -webkit-animation-delay: 48s;
-  -moz-animation-delay: 48s;
-  -o-animation-delay: 48s;
-  -ms-animation-delay: 48s;
-  animation-delay: 48s;
+  -webkit-animation-delay: 40s;
+  -moz-animation-delay: 40s;
+  -o-animation-delay: 40s;
+  -ms-animation-delay: 40s;
+  animation-delay: 40s;
 }
 .slidebackground .background:nth-child(10) {
-  -webkit-animation-delay: 54s;
-  -moz-animation-delay: 54s;
-  -o-animation-delay: 54s;
-  -ms-animation-delay: 54s;
-  animation-delay: 54s;
+  -webkit-animation-delay: 45s;
+  -moz-animation-delay: 45s;
+  -o-animation-delay: 45s;
+  -ms-animation-delay: 45s;
+  animation-delay: 45s;
 }
 .slidebackground:before,
 .slidebackground:after {
@@ -109,14 +109,14 @@
     opacity: 0;
     -webkit-animation-timing-function: ease-in-out;
   }
-  11% {
+  8% {
     opacity: 1;
     -webkit-animation-timing-function: ease-in-out;
   }
-  33% {
+  25% {
     opacity: 1;
   }
-  44% {
+  33% {
     opacity: 0;
     -webkit-animation-timing-function: ease-in-out;
   }
@@ -129,14 +129,14 @@
     opacity: 0;
     -moz-animation-timing-function: ease-in-out;
   }
-  11% {
+  8% {
     opacity: 1;
     -moz-animation-timing-function: ease-in-out;
   }
-  33% {
+  25% {
     opacity: 1;
   }
-  44% {
+  33% {
     opacity: 0;
     -moz-animation-timing-function: ease-in-out;
   }
@@ -149,14 +149,14 @@
     opacity: 0;
     -o-animation-timing-function: ease-in-out;
   }
-  11% {
+  8% {
     opacity: 1;
     -o-animation-timing-function: ease-in-out;
   }
-  33% {
+  25% {
     opacity: 1;
   }
-  44% {
+  33% {
     opacity: 0;
     -o-animation-timing-function: ease-in-out;
   }
@@ -169,14 +169,14 @@
     opacity: 0;
     -ms-animation-timing-function: ease-in-out;
   }
-  11% {
+  8% {
     opacity: 1;
     -ms-animation-timing-function: ease-in-out;
   }
-  33% {
+  25% {
     opacity: 1;
   }
-  44% {
+  33% {
     opacity: 0;
     -ms-animation-timing-function: ease-in-out;
   }
@@ -189,14 +189,14 @@
     opacity: 0;
     animation-timing-function: ease-in-out;
   }
-  11% {
+  8% {
     opacity: 1;
     animation-timing-function: ease-in-out;
   }
-  33% {
+  25% {
     opacity: 1;
   }
-  44% {
+  33% {
     opacity: 0;
     animation-timing-function: ease-in-out;
   }
