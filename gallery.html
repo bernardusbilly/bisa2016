@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#"
+      lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Title and Icon -->
+    <title>BISA Webpage</title>
+    <link rel="icon" type="image/png" href="./build/img/favicon.png">
+
+    <!-- Facebook -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="BISA Webpage: The Berkeley Indonesian Student Association (BISA) was established in 1991. Over the past two decades, it has gone through a series of changes with the purpose of creating stronger friendships between Indonesian students in the UC Berkeley campus.">
+    <meta name="author" content="Billy Tjiptoning">
+    <meta property="og:image" content="./build/img/preview.png" />
+
+    <!-- JGallery -->
+    <link rel="stylesheet" type="text/css" media="all" href="build/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="build/css/jgallery.min.css?v=1.5.0" />
+    <script type="text/javascript" src="build/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="build/js/jgallery.min.js?v=1.5.0"></script>
+    <script type="text/javascript" src="build/js/touchswipe.min.js"></script>
+</head>
+
+<body>
+<div id="gallery">
+    <div class="album" data-jgallery-album-title="Group Photos">
+        <a href="build/img/bisa_2015.jpg"><img src="build/img/bisa_2015.jpg" alt="BISA 2015" /></a>
+        <a href="build/img/bisa_2014.jpg"><img src="build/img/bisa_2014.jpg" alt="BISA 2014" /></a>
+        <a href="build/img/bisa_2013.jpg"><img src="build/img/bisa_2013.jpg" alt="BISA 2013" /></a>
+        <a href="build/img/bisa_2012.jpg"><img src="build/img/bisa_2012.jpg" alt="BISA 2012" /></a>
+    </div>
+    <div class="album" data-jgallery-album-title="Album 2">
+        <a href="build/img/bisa_2015.jpg"><img src="build/img/bisa_2015.jpg" alt="BISA 2015" /></a>
+        <a href="build/img/bisa_2014.jpg"><img src="build/img/bisa_2014.jpg" alt="BISA 2014" /></a>
+        <a href="build/img/bisa_2013.jpg"><img src="build/img/bisa_2013.jpg" alt="BISA 2013" /></a>
+        <a href="build/img/bisa_2012.jpg"><img src="build/img/bisa_2012.jpg" alt="BISA 2012" /></a>
+    </div>
+</div>
+<script type="text/javascript">
+$( function() {
+    $('#gallery').jGallery({ 
+        mode: 'full-screen' 
+    });
+} );
+</script>
+</body>
+</html>

@@ -30,6 +30,11 @@ body {
 	background-repeat: no-repeat;
 	color: #333333;
 	font-weight: bold;
+
+	.about-title {
+		font-size: 30px;
+		padding-bottom: 10px;
+	}
 	
 	.about-text {
 		background-color: rgba(255,255,255,0.4);
@@ -46,15 +51,17 @@ body {
 		top: 50%;
 		left: 50%;
 		width: 200px;
-		margin: -230px 0 0 -100px;
+		margin: -250px 0 0 -100px;
 	}
 
 	.info-officer-photo {
 		position: relative;
 		z-index: 1;
+		margin-bottom: 20px;
 
 		.photo-officer {
 			width: 100%;
+			border-radius: 10px;
 		}
 		.photo-bw {
 			-webkit-filter: grayscale(100%);
@@ -63,12 +70,15 @@ body {
 		.info-officer-socmed {
 			text-align: center;
 			position: absolute;
-			top: 50%;
-			left: 50%;
+			bottom: 2px;
+			right: 2px;
 			margin-left: -25px;
 
 			.socmed {
 				width: 25px;
+			}
+			.socmed:hover {
+				outline: 2px solid #FFF;
 			}
 		}
 	}
@@ -82,10 +92,10 @@ body {
 
 		.info-officer-group {
 			position: absolute;
-			width: 400px;
+			width: 600px;
 			top: 0;
 			left: 50%;
-			margin: 0 0 0 -200px;
+			margin: 25px 0 0 -300px;
 
 			.info-officer-name {
 				font-size: 20px;
@@ -94,7 +104,7 @@ body {
 				font-size: 12px;
 			}
 			.info-officer-others {
-				font-size: 14px
+				font-size: 12px
 			}
 		}
 	}
