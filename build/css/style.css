@@ -100,7 +100,7 @@ body {
 @media (max-width: 767px) {
   #officer .info-officer-wrapper .info-officer-group {
     width: 300px;
-    margin: 0px 0 0 -150px;
+    margin: -20px 0 0 -150px;
   }
 }
 #gallery {
