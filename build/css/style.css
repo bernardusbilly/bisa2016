@@ -2,6 +2,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #EEE;
 }
+a {
+  color: inherit;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
 #home {
   background-color: #003262;
 }
@@ -19,6 +26,23 @@ body {
   width: 500px;
   margin-top: 30px;
   margin-left: -250px;
+}
+#home .test-bank {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #FDB515;
+  color: #003262;
+  border-radius: 4px;
+  padding: 10px 20px;
+  border: 2px solid #FDB515;
+}
+#home .test-bank:hover {
+  background-color: #003262;
+  color: #FDB515;
+}
+#home .test-bank:focus {
+  top: 6px;
 }
 #about {
   background: url(../img/campanile.jpg);
