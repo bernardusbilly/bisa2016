@@ -137,7 +137,7 @@ a:focus {
   top: 50%;
   left: 50%;
   width: 1800px;
-  margin: -200px 0 0 -900px;
+  margin: -35px 0 0 -900px;
   z-index: 1;
   color: #EEEEEE;
   cursor: pointer;
@@ -146,7 +146,6 @@ a:focus {
 #gallery .gallery-title-wrapper .gallery-title {
   font-size: 50px;
   text-align: center;
-  padding-top: 140px;
 }
 #gallery .gallery-title-wrapper:hover {
   color: #EEEEEE;
