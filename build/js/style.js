@@ -1,4 +1,16 @@
+$(window).load(function() {
+	$('#load-page').css("opacity", "0");
+	$('#load-page').css("z-index", "-100");
+});
+
 $(document).ready(function() {
+	
+	$('.hidden-title').hide();
+	$('.about-text').hide();
+	$('.officer-title').hide();
+	$('.gallery-title').hide();
+	$('.contact-title').hide();
+
     $('#fullpage').fullpage({
     	//Navigation
         menu: false,
