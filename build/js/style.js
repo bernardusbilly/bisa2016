@@ -1,8 +1,58 @@
-$(window).ready(function() {
-	$('.hidden-title').hide();
-	$('.about-text').hide();
-	$('.officer-title').hide();
-	$('.gallery-title').hide();
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+    	//Navigation
+        menu: false,
+        lockAnchors: true,
+        anchors:['home', 'about', 'officer', 'gallery', 'contact'],
+        navigation: true,
+        navigationPosition: 'right',
+        showActiveTooltip: true,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+        loopHorizontal: false,
+
+        afterLoad: function(anchorLink, index){
+            var loadedSection = $(this);
+
+            if(index == 1){
+            	$('.hidden-title').show();
+				$('.hidden-title').addClass("animated fadeInLeft");
+			} if(index == 2){
+                $('.about-text').show();
+				$('.about-text').addClass("animated fadeIn");
+            } if(index == 3){
+                $('.officer-title').show();
+				$('.officer-title').addClass("animated bounceInDown");
+            } if(index == 4){
+                $('.gallery-title').show();
+				$('.gallery-title').addClass("animated bounceIn");
+            } if(index == 5){
+                $('.contact-title').show();
+				$('.contact-title').addClass("animated pulse");
+            }
+        },
+
+        onLeave: function(index, nextIndex, direction){
+            var leavingSection = $(this);
+
+            if(index == 1){
+            	$('.hidden-title').hide();
+				$('.hidden-title').removeClass("animated fadeInLeft");
+			} if(index == 2){
+            	$('.about-text').hide();
+				$('.about-text').removeClass("animated fadeIn");
+            } if(index == 3){
+                $('.officer-title').hide();
+				$('.officer-title').removeClass("animated bounceInDown");
+            } if(index == 4){
+                $('.gallery-title').hide();
+				$('.gallery-title').removeClass("animated bounceIn");
+            } if(index == 5){
+                $('.contact-title').hide();
+				$('.contact-title').removeClass("animated pulse");
+            }
+        }
+    });
 });
 
 $(window).load(function() {

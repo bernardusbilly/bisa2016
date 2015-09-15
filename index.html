@@ -7,13 +7,19 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>BISA Webpage</title>
+
+    <!-- Loading Screen -->
+    <script src="build/js/pace.min.js"></script>
+    <link href="build/css/pace-theme-bounce.css" rel="stylesheet" />
+
+    <!-- Facebook -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="BISA Webpage: The Berkeley Indonesian Student Association (BISA) was established in 1991. Over the past two decades, it has gone through a series of changes with the purpose of creating stronger friendships between Indonesian students in the UC Berkeley campus.">
     <meta name="author" content="Billy Tjiptoning">
     <meta property="og:image" content="./build/img/preview.png" />
     <link rel="icon" type="image/png" href="./build/img/favicon.png">
-
-    <title>BISA Webpage</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="build/css/bootstrap.min.css" rel="stylesheet">
@@ -269,85 +275,11 @@
 <!-- Bootstrap Core JavaScript -->
 <script type="text/javascript" src="build/js/bootstrap.min.js"></script>
 
-<!-- Custom JavaScript -->
-<script type="text/javascript" src="build/js/style.js"></script>
-
 <!-- Fullpage JavaScript -->
 <script type="text/javascript" src="build/js/jquery.fullPage.js"></script>
-<script>
-$(document).ready(function() {
-    $('#fullpage').fullpage({
-    	//Navigation
-        menu: false,
-        lockAnchors: true,
-        anchors:['home', 'about', 'officer', 'gallery', 'contact'],
-        navigation: true,
-        navigationPosition: 'right',
-        showActiveTooltip: true,
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom',
-        loopHorizontal: false,
 
-        afterLoad: function(anchorLink, index){
-            var loadedSection = $(this);
-
-            if(index == 1){
-            	$('.hidden-title').show();
-				$('.hidden-title').addClass("animated fadeInLeft");
-			}
-
-            if(index == 2){
-                $('.about-text').show();
-				$('.about-text').addClass("animated fadeIn");
-            }
-
-            if(index == 3){
-                $('.officer-title').show();
-				$('.officer-title').addClass("animated bounceInDown");
-            }
-
-            if(index == 4){
-                $('.gallery-title').show();
-				$('.gallery-title').addClass("animated bounceIn");
-            }
-
-            if(index == 5){
-                $('.contact-title').show();
-				$('.contact-title').addClass("animated pulse");
-            }
-        },
-
-        onLeave: function(index, nextIndex, direction){
-            var leavingSection = $(this);
-
-            if(index == 1){
-            	$('.hidden-title').hide();
-				$('.hidden-title').removeClass("animated fadeInLeft");
-			}
-
-            if(index == 2){
-            	$('.about-text').hide();
-				$('.about-text').removeClass("animated fadeIn");
-            }
-
-            if(index == 3){
-                $('.officer-title').hide();
-				$('.officer-title').removeClass("animated bounceInDown");
-            }
-
-            if(index == 4){
-                $('.gallery-title').hide();
-				$('.gallery-title').removeClass("animated bounceIn");
-            }
-
-            if(index == 5){
-                $('.contact-title').hide();
-				$('.contact-title').removeClass("animated pulse");
-            }
-        }
-    });
-});
-</script>
+<!-- Custom JavaScript -->
+<script type="text/javascript" src="build/js/style.js"></script>
 
 </body>
 </html>
