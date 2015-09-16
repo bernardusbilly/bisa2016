@@ -40,7 +40,7 @@ a:focus {
 		margin-top: 30px;
 		margin-left: -250px;
 	}
-	.link-request,
+
 	.link-testbank,
 	.link-nusantara {
 		position: absolute;
@@ -48,26 +48,36 @@ a:focus {
 		width: 200px;
 		top: 10px;
 		left: 10px;
-		background-color: #FDB515;
+		background-color: #EEE;
 		color: rgb(0, 50 ,98);
 		border-radius: 4px;
 		padding: 10px 20px;
-		border: 2px solid #FDB515;
+		border: 2px solid #EEE;
 		outline: none;
-		&:hover {
-			background-color: rgb(0, 50 ,98);
-			color: #FDB515;
-		}
+		&:hover, 
 		&:focus {
-			background-color: rgb(0, 50 ,98);
-			color: #FDB515;
+			background-color: #EEE;
+			color: rgb(0, 50 ,98);
 		}
 	}
-	.link-testbank {
-		top: 60px;
+	.link-request {
+		left: 300px;
 	}
 	.link-nusantara {
-		top: 110px;
+		top: 70px;
+		left: 20px;
+	}
+	.dropdown {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		.btn:active {
+			box-shadow: none;
+			-webkit-box-shadow: none;
+		}
+	}
+	.dropdown-menu {
+		margin: 55px 50px 0;
 	}
 }
 #about {
@@ -215,13 +225,17 @@ a:focus {
 	width: 100%;
 	text-align:center;
 
+	h3 {
+		margin-bottom: 20px;
+	}
+
 	.form-request-access {
 		color: #333;
 		position: absolute;
 		width: 300px;
 		top: 50%;
 		left: 50%;
-		margin: -120px 0 0 -150px;
+		margin: -180px 0 0 -150px;
 
 		input {
 			width: 100%;

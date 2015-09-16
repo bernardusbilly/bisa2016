@@ -36,7 +36,6 @@ a:focus {
   margin-top: 30px;
   margin-left: -250px;
 }
-#home .link-request,
 #home .link-testbank,
 #home .link-nusantara {
   position: absolute;
@@ -44,30 +43,38 @@ a:focus {
   width: 200px;
   top: 10px;
   left: 10px;
-  background-color: #FDB515;
+  background-color: #EEE;
   color: #003262;
   border-radius: 4px;
   padding: 10px 20px;
-  border: 2px solid #FDB515;
+  border: 2px solid #EEE;
   outline: none;
 }
-#home .link-request:hover,
 #home .link-testbank:hover,
-#home .link-nusantara:hover {
-  background-color: #003262;
-  color: #FDB515;
-}
-#home .link-request:focus,
+#home .link-nusantara:hover,
 #home .link-testbank:focus,
 #home .link-nusantara:focus {
-  background-color: #003262;
-  color: #FDB515;
+  background-color: #EEE;
+  color: #003262;
 }
-#home .link-testbank {
-  top: 60px;
+#home .link-request {
+  left: 300px;
 }
 #home .link-nusantara {
-  top: 110px;
+  top: 70px;
+  left: 20px;
+}
+#home .dropdown {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#home .dropdown .btn:active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+#home .dropdown-menu {
+  margin: 55px 50px 0;
 }
 #about {
   background: url(../img/campanile.jpg);
@@ -197,13 +204,16 @@ a:focus {
   width: 100%;
   text-align: center;
 }
+.request h3 {
+  margin-bottom: 20px;
+}
 .request .form-request-access {
   color: #333;
   position: absolute;
   width: 300px;
   top: 50%;
   left: 50%;
-  margin: -120px 0 0 -150px;
+  margin: -180px 0 0 -150px;
 }
 .request .form-request-access input {
   width: 100%;
