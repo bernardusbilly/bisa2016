@@ -79,6 +79,18 @@ a:focus {
 #home .dropdown-menu {
   margin: 105px 50px 0;
 }
+#home .audio-logo {
+  position: absolute;
+  width: 200px;
+  top: 20px;
+  right: 20px;
+}
+#home .audio-controller {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  cursor: pointer;
+}
 #about {
   background: url(../img/campanile.jpg);
   background-size: cover;

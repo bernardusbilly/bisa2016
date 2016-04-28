@@ -4,6 +4,28 @@ $(window).load(function() {
 });
 
 $(document).ready(function() {
+
+	var ddplus = Dolby.checkDDPlus();
+	var audio = new Audio('build/audio/indonesiaraya.mp3');
+	if( ddplus === true ){
+	    // Dolby Digital Plus supported
+	    // code dependent on Dolby Digital Plus here
+	    console.log("Browser is supported for Dolby Audio Enhancement.");
+	    audio = new Audio('build/audio/indonesiaraya_Dolby.mp4');
+	} else {
+		console.log("Browser is not supported for Dolby Audio Enhancement.");
+	}
+
+	$('.audio-controller').click(function() {
+		audio.volume = 0.4;
+		if (audio.paused == true) {
+			audio.play();
+			$('.audio-controller').html("<span class='fa fa-pause'></span>");
+		} else {
+			audio.pause();
+			$('.audio-controller').html("<span class='fa fa-play'></span>");
+		}
+	});
 	
 	$('.hidden-title').hide();
 	$('.about-text').hide();
@@ -101,32 +123,4 @@ $(window).load(function() {
 		$(this).children().addClass("photo-bw");
 	});
 
-	/*
-	set the height for a particular section -- automatic by fullpage
-
-	var winHeight = $(window).height();
-	var timer;
-	var marginPhotoHeight = $('.photo-officer').height()/2;
-	var marginAboutText = $('.about-text').height() * 2/3;
-
-	$('.about-text-wrapper').css("height", winHeight+"px");
-	$('.info-officer-photo').css("height", winHeight+"px");
-	clearTimeout(timer);
-	timer = setTimeout(function() {
-        $('.photo-officer').css("margin-top", -marginPhotoHeight+"px");
-        $('.about-text').css("margin-top", -marginAboutText+"px");
-    }, 200);
-
-	$(window).resize(function() {
-		winHeight = $(window).height();
-		marginPhotoHeight = $('.photo-officer').height()/2;
-		marginAboutText = $('.about-text').height() * 2/3;
-		clearTimeout(timer);
-	    timer = setTimeout(function() {
-	    	$('.about-text-wrapper').css("height", winHeight+"px");
-	    	$('.info-officer-photo').css("height", winHeight+"px");
-	        $('.photo-officer').css("margin-top", -marginPhotoHeight+"px");
-	        $('.about-text').css("margin-top", -marginAboutText+"px");
-	    }, 200);
-	});*/
 });
